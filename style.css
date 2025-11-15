@@ -1,0 +1,97 @@
+body{
+            font-family: 'Times New Roman', Times, serif;
+            transition: background-color 0.5s, color 0.5s;
+            margin: 20px;
+            background: #70b5ff;
+            min-height: 100vh;
+        }
+        .btn{
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 14px;
+            margin: 10px 5px;
+            min-width: 150px;
+            font-size: 16px;
+            transition: 0.3s;
+            
+        }
+        .btn:no-hover{
+            transform: scale(1);
+        }
+        .btn:not(.no-hover):hover{
+            transform: scale(1.15);
+        }
+        .btn:not(.no-active):active {
+            transform: scale(0.85);
+        }
+        .btn:no-active{
+            transform: scale(1);
+        }
+        header{
+            font-size: 36px;
+            margin-bottom: 20px;
+            background: #bdddff;
+            padding: 20px;
+            border-radius: 14px;
+            text-align: center;
+            
+        }
+        section {
+            padding: 20px;
+            border-radius: 10px;
+            background: #bdddff;
+            text-align: center;
+        }
+        #colorInfo,#colorHistoryInfo{
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px;
+            background: #00000080;
+            border-radius: 5px;
+            display: inline-block;
+        }
+            .color-square {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin: 0 5px;
+            border: 1px solid #000;
+            vertical-align: middle;
+        }
+        .colorStats{
+            margin-top: 20px; 
+            padding: 15px; 
+            background: rgba(255,255,255,0.3); 
+            border-radius: 10px;
+            border: 2px dashed #007bff;
+        }
+        .color-square:hover{
+            transform: scale(1.15);     
+        }
+        .myModal{
+             background: rgba(255,255,255,0.3);
+            transition: background-color 0.5s, color 0.5s; 
+        }
+        dialog{
+            background: green;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .alert{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 30%;
+            height: 15%;
+            background-color: white;
+            padding: 20px;
+            margin: 15% auto;
+            border-radius: 14px;
+            color: #000;
+            transition: background-color 0.5s, color 0.5s;
+        }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripte.js"></script>
+</head>
+<body>
+
+    <header>Привет, я Арсений!</header>
+    <aside id="alert" class="alert">
+        <h3 id="alertText"></h3>
+        <button onclick="closeAlert()">Закрыть</button>
+    </aside>
+    
+        <dialog id="myModal">
+            <h3>Подробности</h3>
+            <p id="infoRGB">rgb</p>
+            <p id="infoHSL">hsl</p>
+            <p id="brightness">brightness</p>
+            <button onclick="btn_close()">Закрыть</button>
+        </dialog>
+    
+
+    <section>
+        <p>Я изучаю Frontend разработку</p>
+        <button class="btn" onclick="changeColor()">Сменить цвет</button>
+        <button class="btn" onclick="changeColorReset()">Сбросить</button>
+        <button class="btn" id="btnSaveColor" onclick="saveHistoryColor()">Сохранить</button>
+        <p id="colorInfo">Текущий цвет: #70b5ff</p>
+        <br>
+        <p id="colorHistoryInfo">История цветов</p>
+        <div id="colorStats"></div>
+    </section>
+
+</body>
+</html>
