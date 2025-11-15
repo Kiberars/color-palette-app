@@ -36,25 +36,29 @@
                 btnFalse()
                 return;
             }
-            if (!colorHistory.includes(currentColor )) {
-                colorHistory.push(currentColor );          
-                if(colorHistory.length >3){
-                    btnFalse();
-                    return;
-                    colorHistory.shift();                    
+            try {
+                if (!colorHistory.includes(currentColor )) {
+                    colorHistory.push(currentColor );          
+                    if(colorHistory.length >3){
+                        btnFalse();
+                        return;                 
+                    }
+                    updateHistoryDisplay();
+                    showAlert("#559955", `💾 цвет ${currentColor} сохранен в историю`);
+                } else {
+                    showAlert("#999955", `⚠️ Этот цвет уже в истории`) 
+                    btnFalse()
                 }
-                updateHistoryDisplay();
-                showAlert("#559955", `💾 цвет ${currentColor} сохранен в историю`);
-            } else {
-                showAlert("#999955", `⚠️ Этот цвет уже в истории`) 
-                btnFalse()
+                updateStatsDisplay()
+                spanColors = document.getElementsByClassName('color-square');
+                console.log(spanColors);
+                for(const spanColor of spanColors){
+                    spanColor.addEventListener('mouseover', hoverMouse);
+                }
+            } catch (error) {
+                console.error('Ошибка сохранения:', error);
             }
-            updateStatsDisplay()
-            spanColors = document.getElementsByClassName('color-square');
-            console.log(spanColors);
-            for(const spanColor of spanColors){
-                spanColor.addEventListener('mouseover', hoverMouse);
-            }
+           
             
         }
         function updateHistoryDisplay(){
@@ -92,6 +96,7 @@
             document.body.style.color = defaultTextColor ;
             document.getElementById('colorInfo').textContent = `Текущий цвет: ${defaultBackgroundColor }`;
             console.log(`Цвет: ${defaultBackgroundColor }, Текст: ${defaultTextColor }`);
+            updateStatsDisplay(); 
         }
         function updateStatsDisplay() {
 

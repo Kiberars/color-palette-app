@@ -95,3 +95,12 @@ body{
             color: #000;
             transition: background-color 0.5s, color 0.5s;
         }
+        #colorHistoryInfo {
+            min-height: 30px;
+        }
+        .color-stats-item {
+            margin: 5px 0;
+            padding: 5px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+        }
